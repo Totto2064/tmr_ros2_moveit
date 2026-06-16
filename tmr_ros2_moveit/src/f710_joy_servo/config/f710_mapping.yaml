@@ -1,0 +1,23 @@
+joy_to_servo:
+  ros__parameters:
+    command_frame: "flange" # tool の場合は flange , base の場合は base_link
+    
+    # 軸マッピング (F710 Linux mode)
+    axis_linear_x: 0
+    axis_linear_y: 1
+    axis_linear_z_up: 5
+    axis_linear_z_down: 2
+    axis_angular_x: 4    # 右スティック Y → ロール
+    axis_angular_y: 3    # 右スティック X → ピッチ
+    axis_angular_z: -1   # 無効 (-1で無効化)
+    
+    # ボタンマッピング (F710 Linux mode)
+    button_angular_z_pos: 5  # R1 → ヨー正方向
+    button_angular_z_neg: 4  # L1 → ヨー負方向
+    
+    # 速度スケール (m/s, rad/s)
+    linear_scale: 0.50
+    angular_scale: 1.5
+    
+    # 動作設定
+    publish_rate: 50.0
